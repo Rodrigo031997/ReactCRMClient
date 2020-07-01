@@ -8,12 +8,13 @@ import Navegacion from './componentes/layout/navegacion';
 
 /**Componentes Cliente */
 import Clientes from './componentes/clientes/Clientes';
+import NuevoCliente from './componentes/clientes/NuevoCliente';
+import EditarCliente from './componentes/clientes/EditarCliente';
+
 /**Componentes Productos */
 import Productos from './componentes/productos/productos';
 /**Componentes Pedidos */
 import Pedidos from './componentes/pedidos/pedidos';
-
-
 
 function App(){
   return(
@@ -26,6 +27,8 @@ function App(){
          <main className="caja-contenido col-9">
            <Switch>
              <Route exact path="/" component={Clientes}></Route>
+             <Route exact path="/cliente-nuevo" component={NuevoCliente}></Route>
+             <Route exact path="/cliente-editar/:id" component={EditarCliente}></Route>
 
              <Route exact path="/productos" component={Productos}></Route>
 
