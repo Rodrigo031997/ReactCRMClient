@@ -12,7 +12,9 @@ import NuevoCliente from './componentes/clientes/NuevoCliente';
 import EditarCliente from './componentes/clientes/EditarCliente';
 
 /**Componentes Productos */
-import Productos from './componentes/productos/productos';
+import Productos from './componentes/productos/Productos';
+import EditarProducto from './componentes/productos/EditarProducto';
+import NuevoProducto from './componentes/productos/NuevoProducto';
 /**Componentes Pedidos */
 import Pedidos from './componentes/pedidos/pedidos';
 
@@ -31,6 +33,8 @@ function App(){
              <Route exact path="/cliente-editar/:id" component={EditarCliente}></Route>
 
              <Route exact path="/productos" component={Productos}></Route>
+             <Route exact path="/producto-nuevo" component={NuevoProducto}></Route>
+             <Route exact path="/producto-editar/:id" component={EditarProducto}></Route>
 
              <Route exact path="/pedidos" component={Pedidos}></Route>
            </Switch>

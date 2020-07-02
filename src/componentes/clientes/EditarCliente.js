@@ -95,7 +95,7 @@ function EditarCliente(props){
                             placeholder="Nombre Cliente" 
                             name="nombre"
                             onChange={actualizarState}
-                            value={cliente.nombre}
+                            defaultValue={cliente.nombre}
                     />
                 </div>
 
@@ -105,7 +105,7 @@ function EditarCliente(props){
                           placeholder="Apellido Cliente" 
                           name="apellido" 
                           onChange={actualizarState}
-                          value={cliente.apellido}
+                          defaultValue={cliente.apellido}
                     />
                 </div>
             
@@ -115,7 +115,7 @@ function EditarCliente(props){
                           placeholder="Empresa Cliente" 
                           name="empresa" 
                           onChange={actualizarState}
-                          value={cliente.empresa}
+                          defaultValue={cliente.empresa}
                     />
                 </div>
 
@@ -125,7 +125,7 @@ function EditarCliente(props){
                             placeholder="Email Cliente" 
                             name="email" 
                             onChange={actualizarState}
-                            value={cliente.email}
+                            defaultValue={cliente.email}
                     />
                 </div>
 
@@ -135,7 +135,7 @@ function EditarCliente(props){
                         placeholder="Teléfono Cliente" 
                         name="telefono" 
                         onChange={actualizarState}
-                        value={cliente.telefono}
+                        defaultValue={cliente.telefono}
                     />
                 </div>
 
@@ -143,7 +143,7 @@ function EditarCliente(props){
                     <input 
                         type="submit" 
                         className="btn btn-azul" 
-                        value="Guardar Cambios" 
+                        defaultValue="Guardar Cambios" 
                         disabled={ validarCliente() }
                     />
                 </div>

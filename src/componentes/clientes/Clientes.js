@@ -5,6 +5,8 @@ import clienteAxios from '../../config/axios';
 import Cliente from './Cliente';
 /**Importar router link */
 import {Link} from 'react-router-dom';
+/**Importar el Spinner */
+import Spinner from '../layout/Spinner';
 
 function Clientes (){
     
@@ -22,11 +24,16 @@ function Clientes (){
         guardarClientes(clientesConsulta.data);
     }
       consultarAPI();
-    },[clientes]);
+    },[]);
+
+    //Spinner de carga
+    if(!clientes.length) return <Spinner/>
+
     return(
         <Fragment>
             <h2>Clientes</h2>
-            <Link to={"/cliente-nuevo"} className="btn btn-verde nvo-cliente"> <i className="fas fa-plus-circle"></i>
+            <Link to={"/cliente-nuevo"} className="btn btn-verde nvo-cliente"> 
+            <i className="fas fa-plus-circle"></i>
                 Nuevo Cliente
             </Link>
 
